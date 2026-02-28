@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1e1e2e;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ashu.typingapp.controller.ZenModeController">
+    
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12.0" style="-fx-background-color: #2a2a3c; -fx-padding: 10 20 10 20;">
+            <Button mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #ff3333; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="⬅ Back" />
+            
+            <Label text="Difficulty:" textFill="#a6accd" />
+            <ComboBox fx:id="difficultyCombo" prefWidth="85.0" style="-fx-cursor: hand;" />
+
+            <Label text="Sound:" textFill="#a6accd" />
+            <ComboBox fx:id="soundCombo" prefWidth="95.0" style="-fx-cursor: hand;" />
+            
+            <Label text="Timer:" textFill="#a6accd" style="-fx-padding: 0 0 0 10;"/>
+            <StackPane alignment="CENTER_LEFT">
+                <Label fx:id="timerDisplayLabel" text="Not Set" textFill="#ffcc00" onMouseClicked="#enableTimerEdit" style="-fx-font-weight: bold; -fx-cursor: hand; -fx-font-size: 14px;" />
+                <TextField fx:id="timerInputField" visible="false" prefWidth="60.0" onAction="#saveTimer" style="-fx-background-color: #1e1e2e; -fx-text-fill: #ffcc00; -fx-font-weight: bold;" focusTraversable="false" promptText="sec"/>
+            </StackPane>
+            
+            <Pane HBox.hgrow="ALWAYS" />
+            
+            <Label fx:id="wpmLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="WPM: 0" textFill="#00ffcc" />
+            <Label fx:id="accuracyLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Accuracy: 100%" textFill="#ffcc00" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+            <Label text="Type the sentence below:" textFill="#a6accd" style="-fx-font-size: 16px;" />
+            <Label fx:id="targetWordLabel" wrapText="true" textAlignment="CENTER" style="-fx-font-size: 32px; -fx-font-weight: bold;" text="loading..." textFill="#ffffff" />
+            <Label fx:id="userInputLabel" wrapText="true" textAlignment="CENTER" style="-fx-font-size: 32px; -fx-font-weight: bold;" text="" textFill="#a6accd" />
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox fx:id="keyboardPane" alignment="CENTER" spacing="8" style="-fx-padding: 0 0 30 0;">
+            </VBox>
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #0b0c10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ashu.typingapp.controller.ProfileController">
+    
+    <top>
+        <HBox style="-fx-padding: 20;">
+            <Button mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #ff3333; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="⬅ Back to Base" />
+        </HBox>
+    </top>
+    
+    <center>
+        <VBox alignment="CENTER" spacing="40">
+            <Label text="COMMANDER STATS" textFill="#66fcf1" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-letter-spacing: 4px; -fx-effect: dropshadow(gaussian, #66fcf1, 10, 0.5, 0, 0);" />
+
+            <HBox alignment="CENTER" spacing="30">
+                <VBox alignment="CENTER" spacing="10" style="-fx-border-color: #00ffcc; -fx-border-width: 2; -fx-border-radius: 10; -fx-padding: 30; -fx-background-color: #1e1e2e;">
+                    <Label text="🏆 ZEN HIGH SCORE" textFill="#a6accd" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                    <Label fx:id="zenWpmLabel" text="0 WPM" textFill="#00ffcc" style="-fx-font-size: 32px; -fx-font-weight: bold;" />
+                </VBox>
+
+                <VBox alignment="CENTER" spacing="10" style="-fx-border-color: #ff3366; -fx-border-width: 2; -fx-border-radius: 10; -fx-padding: 30; -fx-background-color: #1e1e2e;">
+                    <Label text="🚀 METEOR TOP SCORE" textFill="#a6accd" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                    <Label fx:id="meteorScoreLabel" text="0" textFill="#ff3366" style="-fx-font-size: 32px; -fx-font-weight: bold;" />
+                </VBox>
+
+                <VBox alignment="CENTER" spacing="10" style="-fx-border-color: #ffcc00; -fx-border-width: 2; -fx-border-radius: 10; -fx-padding: 30; -fx-background-color: #1e1e2e;">
+                    <Label text="⌨️ TOTAL KEYSTROKES" textFill="#a6accd" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                    <Label fx:id="keystrokesLabel" text="0" textFill="#ffcc00" style="-fx-font-size: 32px; -fx-font-weight: bold;" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+    
+</BorderPane>

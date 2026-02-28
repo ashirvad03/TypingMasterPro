@@ -1,0 +1,21 @@
+/* Dark Theme Base */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Custom Buttons with Glow Effect */
+.button {
+    -fx-background-color: #ff007f;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 30 10 30;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.button:hover {
+    -fx-background-color: #ff3399;
+    -fx-effect: dropshadow(gaussian, #ff007f, 15, 0.4, 0, 0);
+}
